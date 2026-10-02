@@ -8,7 +8,10 @@
 8. create-> database users - add new users , add a name, copy password, select atlas admin
 9. clusters -  connect - drivers & client libraries - enable legacy uri strings
 10. Add this to auth file:
-const client = new MongoClient(process.env.BETTER_AUTH_MONGODB_URI!);
-const db = client.db("better-auth-project2"); - database er naam
-11.
+    const client = new MongoClient(process.env.BETTER_AUTH_MONGODB_URI!);
+    const db = client.db("better-auth-project2"); - database er naam
+11. Go to authentication , select email & Password
+12. set emailAndPassword enabled= true,
+13. (auth) evabe likle eta kono route hise count hoi na.
+14. install hero ui 
 
