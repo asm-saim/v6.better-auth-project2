@@ -1,0 +1,14 @@
+1. create next.js app
+2. npm install better-auth 
+3. create .env file and paste secret key.
+3. npm install mongodb
+4. npm install @better-auth/mongo-adapter
+6. paste auth.ts file form mongodb adapters from better auth to your auth.ts
+7. go to mongo.db - database access - ip access list add 0.0.0.0/0
+8. create-> database users - add new users , add a name, copy password, select atlas admin
+9. clusters -  connect - drivers & client libraries - enable legacy uri strings
+10. Add this to auth file:
+const client = new MongoClient(process.env.BETTER_AUTH_MONGODB_URI!);
+const db = client.db("better-auth-project2"); - database er naam
+11.
+
