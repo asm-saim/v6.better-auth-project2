@@ -23,7 +23,7 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-32">
+    <div className="flex justify-center items-center h-screen">
       <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
         <Fieldset.Legend>Profile Settings</Fieldset.Legend>
         <Description>Update your profile information.</Description>

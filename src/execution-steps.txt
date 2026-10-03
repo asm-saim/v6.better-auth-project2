@@ -26,4 +26,29 @@
       callbackURL: "/",
     });
     console.log("set data form the given input", userData, error);
-19.
+19. set signIn page: 
+- signIn steps-
+        const { data: signInData, error } = await signIn.email({
+            email: data.email,
+            password: data.password,
+            rememberMe: true,
+            callbackURL: "/",
+            });
+    
+20. To know if a user is signIn or not, we use useSessions
+- concepts - sessions- useSessions
+- const { data: session } = authClient.useSession()
+
+21. Implement signout function: 
+import { authClient } from "@/lib/auth-client"
+
+await authClient.signOut({
+  fetchOptions: {
+    onSuccess: () => {
+      router.push("/login"); // redirect to login page
+    },
+ },
+});
+
+22. to remove hydration waring we use layout - body:
+  <body suppressHydrationWarning>
