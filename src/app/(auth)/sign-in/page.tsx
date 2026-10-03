@@ -19,6 +19,8 @@ const SignInPage = () => {
     });
     console.log("signIn info", signInData, error);
   };
+  
+  //google login
   const logIn = async () => {
     const googleData = await signIn.social({
       provider: "google",

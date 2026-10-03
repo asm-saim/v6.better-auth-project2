@@ -53,6 +53,28 @@ await authClient.signOut({
 22. to remove hydration waring we use layout - body:   <body suppressHydrationWarning>
 23. Implement Next.js 16+ (Proxy), as a middleware:
 - Next.js 16 replaces "middleware" with "proxy". You can use the Node.js runtime for full session validation with database checks:
-24. go to google console and create oauth id. 
+24. go to google console and create oauth id.
+25. implement this function to the signUp/signIn code:
+    const logIn = async () => {
+        const googleData = await signIn.social({
+        provider: "google",
+        });
+        console.log(googleData);
+    }; 
+26.email verification:
+- go to resend web app.
+- install for next.js
+- create a api key
+- add api key in .env
+27. Go to better Auth - select the email verification - copy the email verification code
+28. Replace after void with resend example code.
+29. Add requireEmailVerification: true, to auth file.
+30. Add this to the emailVerification object-
+    sendOnSignUp: true,
+    autoSignInAfterVerification: true,
+    expiresIn: 60 * 5,
+31. 
+
+
 
   
