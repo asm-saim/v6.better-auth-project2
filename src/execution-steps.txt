@@ -17,12 +17,13 @@
 15. create sign up page
 16. /app/api/auth/[...all]/route.ts
 17. lib/auth-client.ts
-18. go to signup page and set the info in database by using -
-19. const { data: userData, error } = await signUp.email({
+18.Set the input data in the database: 
+- go to signup page and set the info in database by using -
+- const { data: userData, error } = await signUp.email({
       name: data.name,
       email: data.email,
       password: data.password,
       callbackURL: "/",
     });
     console.log("set data form the given input", userData, error);
-20.
+19.
