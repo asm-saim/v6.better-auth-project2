@@ -15,7 +15,7 @@ export default function Navbar() {
     await signOut({
       fetchOptions: {
         onSuccess: () => {
-          router.push("/sign-in"); 
+          router.push("/sign-in");
         },
       },
     });
@@ -50,9 +50,11 @@ export default function Navbar() {
           <li>
             <Link href="#">Dashboard</Link>
           </li>
-          <li>
-            <Link href="#">Profile</Link>
-          </li>
+          {session?.user && (
+            <li>
+              <Link href="/profile">Profile</Link>
+            </li>
+          )}
         </ul>
         <div className="hidden items-center gap-4 md:flex">
           {session?.user ? (

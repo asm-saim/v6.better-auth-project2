@@ -19,6 +19,12 @@ const SignInPage = () => {
     });
     console.log("signIn info", signInData, error);
   };
+  const logIn = async () => {
+    const googleData = await signIn.social({
+      provider: "google",
+    });
+    console.log(googleData);
+  };
   return (
     <div className="flex justify-center items-center h-screen">
       <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
@@ -66,6 +72,9 @@ const SignInPage = () => {
             Reset
           </Button>
         </div>
+        <Button className="my-5" onClick={logIn}>
+          Sign In with Google
+        </Button>
       </Form>
     </div>
   );

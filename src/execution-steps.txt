@@ -50,5 +50,9 @@ await authClient.signOut({
  },
 });
 
-22. to remove hydration waring we use layout - body:
-  <body suppressHydrationWarning>
+22. to remove hydration waring we use layout - body:   <body suppressHydrationWarning>
+23. Implement Next.js 16+ (Proxy), as a middleware:
+- Next.js 16 replaces "middleware" with "proxy". You can use the Node.js runtime for full session validation with database checks:
+24. go to google console and create oauth id. 
+
+  
